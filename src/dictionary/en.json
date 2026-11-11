@@ -1,0 +1,148 @@
+{
+  "common": {
+    "brand": "NOVA",
+    "homeLink": "NOVA, home page",
+    "close": "Close",
+    "cancel": "Cancel",
+    "loading": "Loading…",
+    "backToStore": "Back to the store",
+    "clearFilters": "Clear filters",
+    "skipToContent": "Skip to main content"
+  },
+  "header": {
+    "mainNav": "Main navigation",
+    "home": "Home",
+    "products": "Products",
+    "categories": "Categories",
+    "searchLabel": "Search products",
+    "searchPlaceholder": "Search products…",
+    "searchSubmit": "Search",
+    "cart": "Cart",
+    "cartWithCount": "Cart, {count, plural, =0 {empty} one {# item} other {# items}}",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menuTitle": "Menu",
+    "language": "Language",
+    "languageNames": {
+      "fa": "فارسی",
+      "en": "English"
+    },
+    "languageShort": {
+      "fa": "FA",
+      "en": "EN"
+    },
+    "theme": "Theme",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "hero": {
+    "title": "Smart choices, easy shopping",
+    "subtitle": "Enjoy a different, reliable shopping experience with NOVA",
+    "cta": "View products",
+    "imageAlt": "Headphones, a smartwatch and a sneaker on display podiums"
+  },
+  "categories": {
+    "label": "Product categories",
+    "all": "All",
+    "electronics": "Electronics",
+    "jewelery": "Jewelry",
+    "mensClothing": "Men's clothing",
+    "womensClothing": "Women's clothing"
+  },
+  "products": {
+    "title": "Featured products",
+    "resultCount": "{count, plural, =0 {No products} one {# product} other {# products}}",
+    "searchResultFor": "Results for “{query}”",
+    "addToCart": "Add to cart",
+    "addToCartLabel": "Add {title} to cart",
+    "added": "Added ✓",
+    "ratingLabel": "Rated {rate} out of 5 from {count} reviews",
+    "emptyTitle": "No products found",
+    "emptyDescription": "Try a different search term or category."
+  },
+  "sort": {
+    "label": "Sort by:",
+    "default": "Default",
+    "priceAsc": "Price: low to high",
+    "priceDesc": "Price: high to low",
+    "titleAsc": "Title: A to Z",
+    "titleDesc": "Title: Z to A"
+  },
+  "pagination": {
+    "label": "Product pages",
+    "previous": "Previous page",
+    "next": "Next page",
+    "page": "Page {page}"
+  },
+  "cart": {
+    "title": "Shopping cart",
+    "itemsLabel": "Items in your cart",
+    "unitPrice": "Unit price: {price}",
+    "lineTotal": "Line total",
+    "quantity": "Quantity",
+    "increase": "Increase quantity of {title}",
+    "decrease": "Decrease quantity of {title}",
+    "remove": "Remove {title} from cart",
+    "summaryTitle": "Order summary",
+    "totalItems": "Items",
+    "totalPrice": "Total",
+    "checkout": "Checkout",
+    "checkoutUnavailable": "Online payment is not available in this version.",
+    "clearCart": "Clear cart",
+    "emptyTitle": "Your cart is empty",
+    "emptyDescription": "Add products you like from the store to see them here.",
+    "confirmTitle": "Clear cart",
+    "confirmMessage": "All items will be removed from your cart. Continue?",
+    "confirmAction": "Yes, clear it"
+  },
+  "footer": {
+    "tagline": "A store for everyone",
+    "shoppingGuide": "Shopping guide",
+    "shippingMethods": "Shipping methods",
+    "returns": "Returns",
+    "securePayment": "Secure payment",
+    "faq": "FAQ",
+    "usefulLinks": "Useful links",
+    "home": "Home",
+    "products": "Products",
+    "about": "About us",
+    "contact": "Contact us",
+    "social": "Social media",
+    "telegram": "NOVA on Telegram",
+    "instagram": "NOVA on Instagram",
+    "linkedin": "NOVA on LinkedIn",
+    "x": "NOVA on X",
+    "copyright": "© {year} NOVA. All rights reserved."
+  },
+  "newsletter": {
+    "title": "Stay in touch!",
+    "description": "Join our newsletter to get the latest offers.",
+    "emailLabel": "Email address",
+    "placeholder": "Your email address…",
+    "submit": "Subscribe",
+    "success": "You have subscribed successfully."
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "network": "Could not reach the server. Please check your connection.",
+    "timeout": "The server took too long to respond. Please try again.",
+    "notFound": "The requested data was not found.",
+    "server": "The server ran into a problem. Please try again shortly.",
+    "unknown": "An unknown error occurred.",
+    "retry": "Try again",
+    "notFoundTitle": "Page not found",
+    "notFoundDescription": "The page you are looking for does not exist or has moved."
+  },
+  "metadata": {
+    "siteName": "NOVA",
+    "homeTitle": "NOVA Online Store",
+    "homeDescription": "Shop electronics, clothing and jewelry online with a simple, reliable experience at NOVA.",
+    "cartTitle": "Shopping cart",
+    "cartDescription": "Review and manage the items in your NOVA shopping cart.",
+    "notFoundTitle": "Page not found"
+  },
+  "validation": {
+    "emailRequired": "Email is required.",
+    "emailInvalid": "Please enter a valid email address."
+  }
+}

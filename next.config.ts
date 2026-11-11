@@ -1,5 +1,15 @@
 import type { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 
-const nextConfig: NextConfig = {};
+const withNextIntl = createNextIntlPlugin('./src/i18n.ts');
 
-export default nextConfig;
+const nextConfig: NextConfig = {
+  compiler: {
+    styledComponents: true,
+  },
+  images: {
+    remotePatterns: [{ protocol: 'https', hostname: 'fakestoreapi.com', pathname: '/img/**' }],
+  },
+};
+
+export default withNextIntl(nextConfig);

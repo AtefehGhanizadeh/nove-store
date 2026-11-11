@@ -1,0 +1,148 @@
+{
+  "common": {
+    "brand": "NOVA",
+    "homeLink": "نووا، صفحه اصلی",
+    "close": "بستن",
+    "cancel": "انصراف",
+    "loading": "در حال بارگذاری…",
+    "backToStore": "بازگشت به فروشگاه",
+    "clearFilters": "پاک کردن فیلترها",
+    "skipToContent": "رفتن به محتوای اصلی"
+  },
+  "header": {
+    "mainNav": "منوی اصلی",
+    "home": "خانه",
+    "products": "محصولات",
+    "categories": "دسته‌بندی‌ها",
+    "searchLabel": "جستجوی محصولات",
+    "searchPlaceholder": "جستجو در محصولات…",
+    "searchSubmit": "جستجو",
+    "cart": "سبد خرید",
+    "cartWithCount": "سبد خرید، {count, plural, =0 {خالی} other {# کالا}}",
+    "openMenu": "باز کردن منو",
+    "closeMenu": "بستن منو",
+    "menuTitle": "منو",
+    "language": "زبان",
+    "languageNames": {
+      "fa": "فارسی",
+      "en": "English"
+    },
+    "languageShort": {
+      "fa": "FA",
+      "en": "EN"
+    },
+    "theme": "پوسته",
+    "switchToLight": "تغییر به حالت روشن",
+    "switchToDark": "تغییر به حالت تاریک"
+  },
+  "hero": {
+    "title": "انتخاب هوشمندانه، خرید آسان",
+    "subtitle": "با نووا، تجربه خریدی متفاوت و مطمئن داشته باشید",
+    "cta": "مشاهده محصولات",
+    "imageAlt": "تصویر هدفون، ساعت هوشمند و کفش ورزشی روی سکو"
+  },
+  "categories": {
+    "label": "دسته‌بندی محصولات",
+    "all": "همه",
+    "electronics": "دیجیتال",
+    "jewelery": "زیورآلات",
+    "mensClothing": "پوشاک مردانه",
+    "womensClothing": "پوشاک زنانه"
+  },
+  "products": {
+    "title": "محصولات منتخب",
+    "resultCount": "{count, plural, =0 {محصولی یافت نشد} other {# محصول}}",
+    "searchResultFor": "نتایج جستجو برای «{query}»",
+    "addToCart": "افزودن به سبد",
+    "addToCartLabel": "افزودن {title} به سبد خرید",
+    "added": "به سبد اضافه شد ✓",
+    "ratingLabel": "امتیاز {rate} از ۵ بر اساس {count} نظر",
+    "emptyTitle": "محصولی پیدا نشد",
+    "emptyDescription": "عبارت جستجو یا دسته‌بندی را تغییر دهید."
+  },
+  "sort": {
+    "label": "مرتب‌سازی بر اساس:",
+    "default": "پیش‌فرض",
+    "priceAsc": "قیمت: کم به زیاد",
+    "priceDesc": "قیمت: زیاد به کم",
+    "titleAsc": "عنوان: الف تا ی",
+    "titleDesc": "عنوان: ی تا الف"
+  },
+  "pagination": {
+    "label": "صفحه‌بندی محصولات",
+    "previous": "صفحه قبل",
+    "next": "صفحه بعد",
+    "page": "صفحه {page}"
+  },
+  "cart": {
+    "title": "سبد خرید",
+    "itemsLabel": "کالاهای سبد خرید",
+    "unitPrice": "قیمت واحد: {price}",
+    "lineTotal": "مبلغ کل ردیف",
+    "quantity": "تعداد",
+    "increase": "افزایش تعداد {title}",
+    "decrease": "کاهش تعداد {title}",
+    "remove": "حذف {title} از سبد",
+    "summaryTitle": "خلاصه سفارش",
+    "totalItems": "تعداد کالاها",
+    "totalPrice": "مبلغ قابل پرداخت",
+    "checkout": "تسویه حساب",
+    "checkoutUnavailable": "پرداخت آنلاین در این نسخه فعال نیست.",
+    "clearCart": "خالی کردن سبد خرید",
+    "emptyTitle": "سبد خرید شما خالی است",
+    "emptyDescription": "محصولات مورد علاقه‌تان را از فروشگاه به سبد اضافه کنید.",
+    "confirmTitle": "خالی کردن سبد خرید",
+    "confirmMessage": "همه کالاها از سبد خرید حذف می‌شوند. ادامه می‌دهید؟",
+    "confirmAction": "بله، خالی شود"
+  },
+  "footer": {
+    "tagline": "فروشگاهی برای همه",
+    "shoppingGuide": "راهنمای خرید",
+    "shippingMethods": "روش‌های ارسال",
+    "returns": "بازگشت کالا",
+    "securePayment": "پرداخت امن",
+    "faq": "سوالات متداول",
+    "usefulLinks": "لینک‌های مفید",
+    "home": "خانه",
+    "products": "محصولات",
+    "about": "درباره ما",
+    "contact": "تماس با ما",
+    "social": "شبکه‌های اجتماعی",
+    "telegram": "تلگرام نووا",
+    "instagram": "اینستاگرام نووا",
+    "linkedin": "لینکدین نووا",
+    "x": "ایکس نووا",
+    "copyright": "© {year} نووا. تمامی حقوق محفوظ است."
+  },
+  "newsletter": {
+    "title": "با ما در ارتباط باشید!",
+    "description": "برای دریافت جدیدترین پیشنهادها در خبرنامه عضو شوید.",
+    "emailLabel": "آدرس ایمیل",
+    "placeholder": "آدرس ایمیل شما…",
+    "submit": "عضویت",
+    "success": "عضویت شما با موفقیت ثبت شد."
+  },
+  "errors": {
+    "title": "مشکلی پیش آمد",
+    "network": "ارتباط با سرور برقرار نشد. اتصال اینترنت خود را بررسی کنید.",
+    "timeout": "پاسخ سرور بیش از حد طول کشید. دوباره تلاش کنید.",
+    "notFound": "اطلاعات درخواستی پیدا نشد.",
+    "server": "سرور با خطا مواجه شد. کمی بعد دوباره تلاش کنید.",
+    "unknown": "خطای ناشناخته‌ای رخ داد.",
+    "retry": "تلاش دوباره",
+    "notFoundTitle": "صفحه پیدا نشد",
+    "notFoundDescription": "صفحه‌ای که دنبال آن هستید وجود ندارد یا منتقل شده است."
+  },
+  "metadata": {
+    "siteName": "نووا",
+    "homeTitle": "فروشگاه اینترنتی نووا",
+    "homeDescription": "خرید آنلاین لوازم دیجیتال، پوشاک و زیورآلات با تجربه‌ای ساده و مطمئن در فروشگاه نووا.",
+    "cartTitle": "سبد خرید",
+    "cartDescription": "کالاهای انتخاب‌شده در سبد خرید نووا را مرور و مدیریت کنید.",
+    "notFoundTitle": "صفحه پیدا نشد"
+  },
+  "validation": {
+    "emailRequired": "وارد کردن ایمیل الزامی است.",
+    "emailInvalid": "ایمیل وارد شده معتبر نیست."
+  }
+}
