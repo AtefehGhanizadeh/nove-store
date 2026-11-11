@@ -1,12 +1,11 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import LanguageSwitcher from '@/components/Layout/LanguageSwitcher';
-import ThemeToggle from '@/components/Layout/ThemeToggle';
 import Modal from '@/shared/Modal';
 import { useCategoryLabel } from '@/utils/i18n/useCategoryLabel';
 import { toSearchParams } from '@/utils/productQuery';
-import { Section, SectionTitle, DrawerLink, Row } from './MobileMenuDrawer.styles';
+import { useTranslations } from 'next-intl';
+import { DrawerLink, Row, Section, SectionTitle } from './MobileMenuDrawer.styles';
 
 interface MobileMenuDrawerProps {
   open: boolean;
@@ -69,10 +68,6 @@ export default function MobileMenuDrawer({ open, onClose, categories }: MobileMe
         <Row>
           <SectionTitle as="span">{t('language')}</SectionTitle>
           <LanguageSwitcher />
-        </Row>
-        <Row>
-          <SectionTitle as="span">{t('theme')}</SectionTitle>
-          <ThemeToggle />
         </Row>
       </Section>
     </Modal>
