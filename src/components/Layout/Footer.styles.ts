@@ -29,6 +29,7 @@ export const Grid = styled.div`
 export const Brand = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: ${({ theme }) => theme.space.xxs};
 `;
 
