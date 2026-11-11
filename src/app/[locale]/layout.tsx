@@ -4,6 +4,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { OPEN_GRAPH_LOCALES, getDirection, routing } from '@/utils/i18n/routing';
 import StyledComponentsRegistry from '@/utils/StyledComponentsRegistry';
+import { THEME_INIT_SCRIPT } from '@/utils/themeInitScript';
+import { ThemeProvider } from '@/context/ThemeContext';
 import '../globals.css';
 
 export function generateStaticParams() {
@@ -32,9 +34,14 @@ export default async function LocaleLayout({ children }: { children: ReactNode }
 
   return (
     <html lang={locale} dir={getDirection(locale)}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body>
         <StyledComponentsRegistry>
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          <ThemeProvider>
+            <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          </ThemeProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
