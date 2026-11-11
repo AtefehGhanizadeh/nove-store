@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" fill="none">
+  <!-- Original illustration for NOVA: headphones, smartwatch and sneaker on podiums. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4EEE6"/>
+      <stop offset="1" stop-color="#E9E1D6"/>
+    </linearGradient>
+    <linearGradient id="podium" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E7E2DA"/>
+    </linearGradient>
+    <linearGradient id="cushion" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E9DDCB"/>
+      <stop offset="1" stop-color="#CDBBA3"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1F2A44"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="420" rx="28" fill="url(#bg)"/>
+  <circle cx="470" cy="150" r="150" fill="#FFFFFF" opacity="0.45"/>
+  <circle cx="120" cy="90" r="70" fill="#F97316" opacity="0.08"/>
+
+  <!-- Podiums -->
+  <ellipse cx="190" cy="360" rx="130" ry="26" fill="#D8CFC3"/>
+  <rect x="60" y="300" width="260" height="60" fill="url(#podium)"/>
+  <ellipse cx="190" cy="300" rx="130" ry="26" fill="#FFFFFF"/>
+
+  <ellipse cx="460" cy="372" rx="150" ry="24" fill="#D8CFC3"/>
+  <rect x="310" y="330" width="300" height="42" fill="url(#podium)"/>
+  <ellipse cx="460" cy="330" rx="150" ry="24" fill="#FFFFFF"/>
+
+  <!-- Headphones -->
+  <path d="M110 230c0-70 36-120 80-120s80 50 80 120" stroke="#CDBBA3" stroke-width="18" stroke-linecap="round"/>
+  <path d="M110 230c0-70 36-120 80-120s80 50 80 120" stroke="#E9DDCB" stroke-width="8" stroke-linecap="round"/>
+  <rect x="84" y="210" width="52" height="86" rx="24" fill="url(#cushion)"/>
+  <rect x="96" y="222" width="28" height="62" rx="14" fill="#B9A68D"/>
+  <rect x="244" y="210" width="52" height="86" rx="24" fill="url(#cushion)"/>
+  <rect x="256" y="222" width="28" height="62" rx="14" fill="#B9A68D"/>
+
+  <!-- Smartwatch -->
+  <rect x="352" y="196" width="40" height="44" rx="10" fill="#1A2234"/>
+  <rect x="352" y="300" width="40" height="40" rx="10" fill="#1A2234"/>
+  <rect x="332" y="226" width="80" height="88" rx="22" fill="#111827"/>
+  <rect x="340" y="234" width="64" height="72" rx="16" fill="url(#screen)"/>
+  <circle cx="372" cy="270" r="20" stroke="#F97316" stroke-width="4"/>
+  <path d="M372 258v12l8 6" stroke="#E6EAF2" stroke-width="3" stroke-linecap="round"/>
+  <rect x="412" y="252" width="6" height="16" rx="3" fill="#374151"/>
+
+  <!-- Sneaker -->
+  <path d="M440 318c4-34 18-62 40-72 14-6 26 2 36 14 14 16 36 22 60 26 20 4 26 18 26 32H440Z" fill="#F3F4F6"/>
+  <path d="M440 318h162v10a8 8 0 0 1-8 8H448a8 8 0 0 1-8-8v-10Z" fill="#D1D5DB"/>
+  <path d="M474 262c10 12 20 26 22 44" stroke="#9CA3AF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M500 270c10 10 20 22 24 36" stroke="#9CA3AF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M540 288c10 4 26 8 40 10" stroke="#F97316" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="488" cy="258" r="4" fill="#6B7280"/>
+  <circle cx="502" cy="268" r="4" fill="#6B7280"/>
+  <circle cx="514" cy="280" r="4" fill="#6B7280"/>
+</svg>
