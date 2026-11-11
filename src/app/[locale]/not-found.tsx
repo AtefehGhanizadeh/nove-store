@@ -4,7 +4,7 @@ import NotFoundView from '@/components/Common/NotFoundView';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('metadata');
-  return { title: t('notFoundTitle'), robots: { index: false } };
+  return { title: t('notFoundTitle') };
 }
 
 export default function NotFound() {
