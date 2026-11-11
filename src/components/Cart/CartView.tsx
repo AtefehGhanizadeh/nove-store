@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import styled from 'styled-components';
 import { CartIcon } from '@/assets/Icons';
 import { LinkButton } from '@/shared/Button';
 import Container from '@/shared/Container';
@@ -11,47 +10,7 @@ import { selectItems, useCartStore } from '@/storage/cartStore';
 import { useCartHydrated } from '@/storage/useCartHydrated';
 import CartItemRow from './CartItemRow';
 import CartSummary from './CartSummary';
-
-const Page = styled.div`
-  padding-block: ${({ theme }) => theme.space.lg};
-`;
-
-const Heading = styled.h1`
-  display: flex;
-  align-items: center;
-  gap: ${({ theme }) => theme.space.xs};
-  margin-block-end: ${({ theme }) => theme.space.lg};
-  color: var(--color-primary);
-  font-size: ${({ theme }) => theme.fontSize.xxl};
-  font-weight: ${({ theme }) => theme.fontWeight.extraBold};
-
-  svg {
-    width: 28px;
-    height: 28px;
-  }
-`;
-
-const Layout = styled.div`
-  display: grid;
-  gap: ${({ theme }) => theme.space.lg};
-
-  ${({ theme }) => theme.media.lg} {
-    grid-template-columns: minmax(0, 1fr) 340px;
-    align-items: start;
-  }
-`;
-
-const ItemList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.space.sm};
-`;
-
-const LoadingList = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.space.sm};
-`;
+import { Page, Heading, Layout, ItemList, LoadingList } from './CartView.styles';
 
 function CartSkeleton() {
   const t = useTranslations('common');

@@ -1,64 +1,18 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import styled from 'styled-components';
 import LanguageSwitcher from '@/components/Layout/LanguageSwitcher';
 import ThemeToggle from '@/components/Layout/ThemeToggle';
 import Modal from '@/shared/Modal';
 import { useCategoryLabel } from '@/utils/i18n/useCategoryLabel';
-import { Link } from '@/utils/i18n/navigation';
 import { toSearchParams } from '@/utils/productQuery';
+import { Section, SectionTitle, DrawerLink, Row } from './MobileMenuDrawer.styles';
 
 interface MobileMenuDrawerProps {
   open: boolean;
   onClose: () => void;
   categories: string[];
 }
-
-const Section = styled.div`
-  /* The settings section sits outside <nav>, so siblings alone cannot be used here. */
-  &:not(:first-child) {
-    margin-block-start: ${({ theme }) => theme.space.lg};
-    padding-block-start: ${({ theme }) => theme.space.md};
-    border-block-start: 1px solid var(--color-border);
-  }
-`;
-
-const SectionTitle = styled.h3`
-  margin-block-end: ${({ theme }) => theme.space.xs};
-  color: var(--color-text-muted);
-  font-size: ${({ theme }) => theme.fontSize.xs};
-  font-weight: ${({ theme }) => theme.fontWeight.medium};
-`;
-
-const DrawerLink = styled(Link)`
-  display: flex;
-  align-items: center;
-  min-height: ${({ theme }) => theme.layout.touchTarget};
-  padding-inline: ${({ theme }) => theme.space.xs};
-  border-radius: ${({ theme }) => theme.radius.sm};
-  font-weight: ${({ theme }) => theme.fontWeight.medium};
-
-  &:hover {
-    background: var(--color-surface-muted);
-  }
-`;
-
-const Row = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: ${({ theme }) => theme.space.sm};
-  min-height: ${({ theme }) => theme.layout.touchTarget};
-  padding-inline: ${({ theme }) => theme.space.xs};
-
-  ${SectionTitle} {
-    margin: 0;
-    color: var(--color-text);
-    font-size: ${({ theme }) => theme.fontSize.md};
-    font-weight: ${({ theme }) => theme.fontWeight.medium};
-  }
-`;
 
 export default function MobileMenuDrawer({ open, onClose, categories }: MobileMenuDrawerProps) {
   const t = useTranslations('header');

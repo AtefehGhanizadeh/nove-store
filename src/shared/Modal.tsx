@@ -1,13 +1,12 @@
 'use client';
 
-import { useEffect, useId, useRef } from 'react';
-import type { MouseEvent, ReactNode } from 'react';
-import { createPortal } from 'react-dom';
-import styled, { css } from 'styled-components';
 import { CloseIcon } from '@/assets/Icons';
 import IconButton from '@/shared/IconButton';
-
-type ModalVariant = 'dialog' | 'drawer';
+import type { MouseEvent, ReactNode } from 'react';
+import { useEffect, useId, useRef } from 'react';
+import { createPortal } from 'react-dom';
+import { Backdrop, Body, Footer, Header, Panel, Title } from './Modal.styles';
+import type { ModalVariant } from './Modal.styles';
 
 interface ModalProps {
   open: boolean;
@@ -21,77 +20,6 @@ interface ModalProps {
 
 const FOCUSABLE_SELECTOR =
   'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
-
-const Backdrop = styled.div<{ $variant: ModalVariant }>`
-  position: fixed;
-  inset: 0;
-  z-index: ${({ theme }) => theme.zIndex.overlay};
-  display: flex;
-  background: var(--color-overlay);
-
-  ${({ $variant }) =>
-    $variant === 'dialog'
-      ? css`
-          align-items: center;
-          justify-content: center;
-          padding: ${({ theme }) => theme.space.md};
-        `
-      : css`
-          justify-content: flex-start;
-        `}
-`;
-
-const Panel = styled.div<{ $variant: ModalVariant }>`
-  display: flex;
-  flex-direction: column;
-  background: var(--color-surface);
-  color: var(--color-text);
-  box-shadow: ${({ theme }) => theme.shadow.raised};
-
-  &:focus {
-    outline: none;
-  }
-
-  ${({ $variant, theme }) =>
-    $variant === 'dialog'
-      ? css`
-          width: 100%;
-          max-width: 440px;
-          border-radius: ${theme.radius.lg};
-        `
-      : css`
-          width: min(320px, 85vw);
-          height: 100%;
-          overflow-y: auto;
-        `}
-`;
-
-const Header = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: ${({ theme }) => theme.space.sm};
-  padding: ${({ theme }) => `${theme.space.sm} ${theme.space.md}`};
-  border-block-end: 1px solid var(--color-border);
-`;
-
-const Title = styled.h2`
-  font-size: ${({ theme }) => theme.fontSize.lg};
-  color: var(--color-primary);
-`;
-
-const Body = styled.div`
-  flex: 1;
-  padding: ${({ theme }) => theme.space.md};
-`;
-
-const Footer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: ${({ theme }) => theme.space.xs};
-  padding: ${({ theme }) => `0 ${theme.space.md} ${theme.space.md}`};
-`;
 
 function trapFocus(event: KeyboardEvent, container: HTMLElement) {
   const focusable = Array.from(container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR));
