@@ -5,7 +5,7 @@ import MobileMenuDrawer from '@/modals/MobileMenuDrawer';
 import Container from '@/shared/Container';
 import IconButton from '@/shared/IconButton';
 import { useTranslations } from 'next-intl';
-import { useCallback, useState } from 'react';
+import { Suspense, useCallback, useState } from 'react';
 import CartLink from './CartLink';
 import CategoriesMenu from './CategoriesMenu';
 import {
@@ -27,10 +27,10 @@ import SearchForm from './SearchForm';
 import ThemeToggle from './ThemeToggle';
 
 interface HeaderProps {
-  categories: string[];
+  categoriesPromise: Promise<string[]>;
 }
 
-export default function Header({ categories }: HeaderProps) {
+export default function Header({ categoriesPromise }: HeaderProps) {
   const t = useTranslations('header');
   const tCommon = useTranslations('common');
   const [menuOpen, setMenuOpen] = useState(false);
@@ -65,7 +65,9 @@ export default function Header({ categories }: HeaderProps) {
                 <NavLink href="/#products">{t('products')}</NavLink>
               </li>
               <li>
-                <CategoriesMenu categories={categories} />
+                <Suspense fallback={null}>
+                  <CategoriesMenu categoriesPromise={categoriesPromise} />
+                </Suspense>
               </li>
             </NavList>
           </Nav>
@@ -84,7 +86,11 @@ export default function Header({ categories }: HeaderProps) {
         </Inner>
       </Container>
 
-      <MobileMenuDrawer open={menuOpen} onClose={closeMenu} categories={categories} />
+      <MobileMenuDrawer
+        open={menuOpen}
+        onClose={closeMenu}
+        categoriesPromise={categoriesPromise}
+      />
     </HeaderBar>
   );
 }

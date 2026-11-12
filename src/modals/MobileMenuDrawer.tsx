@@ -5,17 +5,56 @@ import Modal from '@/shared/Modal';
 import { useCategoryLabel } from '@/utils/i18n/useCategoryLabel';
 import { toSearchParams } from '@/utils/productQuery';
 import { useTranslations } from 'next-intl';
+import { Suspense, use } from 'react';
 import { DrawerLink, Row, Section, SectionTitle } from './MobileMenuDrawer.styles';
 
 interface MobileMenuDrawerProps {
   open: boolean;
   onClose: () => void;
-  categories: string[];
+  categoriesPromise: Promise<string[]>;
 }
 
-export default function MobileMenuDrawer({ open, onClose, categories }: MobileMenuDrawerProps) {
+interface DrawerCategoriesProps {
+  categoriesPromise: Promise<string[]>;
+  onNavigate: () => void;
+}
+
+function DrawerCategories({ categoriesPromise, onNavigate }: DrawerCategoriesProps) {
+  const categories = use(categoriesPromise);
   const t = useTranslations('header');
   const getCategoryLabel = useCategoryLabel();
+
+  if (categories.length === 0) return null;
+
+  return (
+    <Section>
+      <SectionTitle>{t('categories')}</SectionTitle>
+      <ul>
+        {categories.map((category) => (
+          <li key={category}>
+            <DrawerLink
+              href={{
+                pathname: '/',
+                query: toSearchParams({ category }),
+                hash: 'products',
+              }}
+              onClick={onNavigate}
+            >
+              {getCategoryLabel(category)}
+            </DrawerLink>
+          </li>
+        ))}
+      </ul>
+    </Section>
+  );
+}
+
+export default function MobileMenuDrawer({
+  open,
+  onClose,
+  categoriesPromise,
+}: MobileMenuDrawerProps) {
+  const t = useTranslations('header');
 
   return (
     <Modal
@@ -41,27 +80,9 @@ export default function MobileMenuDrawer({ open, onClose, categories }: MobileMe
           </ul>
         </Section>
 
-        {categories.length > 0 && (
-          <Section>
-            <SectionTitle>{t('categories')}</SectionTitle>
-            <ul>
-              {categories.map((category) => (
-                <li key={category}>
-                  <DrawerLink
-                    href={{
-                      pathname: '/',
-                      query: toSearchParams({ category }),
-                      hash: 'products',
-                    }}
-                    onClick={onClose}
-                  >
-                    {getCategoryLabel(category)}
-                  </DrawerLink>
-                </li>
-              ))}
-            </ul>
-          </Section>
-        )}
+        <Suspense fallback={null}>
+          <DrawerCategories categoriesPromise={categoriesPromise} onNavigate={onClose} />
+        </Suspense>
       </nav>
 
       <Section>

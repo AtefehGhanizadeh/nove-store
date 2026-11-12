@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useId, useRef, useState } from 'react';
+import { use, useEffect, useId, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { ChevronDownIcon } from '@/assets/Icons';
 import { useCategoryLabel } from '@/utils/i18n/useCategoryLabel';
@@ -8,10 +8,11 @@ import { toSearchParams } from '@/utils/productQuery';
 import { Wrapper, Trigger, Menu, MenuLink } from './CategoriesMenu.styles';
 
 interface CategoriesMenuProps {
-  categories: string[];
+  categoriesPromise: Promise<string[]>;
 }
 
-export default function CategoriesMenu({ categories }: CategoriesMenuProps) {
+export default function CategoriesMenu({ categoriesPromise }: CategoriesMenuProps) {
+  const categories = use(categoriesPromise);
   const t = useTranslations('header');
   const getCategoryLabel = useCategoryLabel();
   const [open, setOpen] = useState(false);

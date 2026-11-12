@@ -38,8 +38,9 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function LocaleLayout({ children }: { children: ReactNode }) {
   const locale = await getLocale();
 
-  const categoriesResult = await toApiResult(getCategories());
-  const categories = categoriesResult.ok ? categoriesResult.data : [];
+  const categoriesPromise = toApiResult(getCategories()).then((result) =>
+    result.ok ? result.data : [],
+  );
 
   return (
     <html lang={locale} dir={getDirection(locale)} suppressHydrationWarning>
@@ -51,7 +52,7 @@ export default async function LocaleLayout({ children }: { children: ReactNode }
           <NextIntlClientProvider>
             <ThemeProvider>
               <CartHydration />
-              <Header categories={categories} />
+              <Header categoriesPromise={categoriesPromise} />
               <main id="main-content">{children}</main>
               <Newsletter />
               <Footer year={new Date().getFullYear()} />
